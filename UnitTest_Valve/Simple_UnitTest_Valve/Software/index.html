@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valves Value Calculating - SPK TURBO</title>
+    <link rel="shortcut icon" href="https://roboviet.vn/wp-content/uploads/2020/11/cropped-2__2_-removebg-preview-32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-8 d-flex justify-content-between flex-wrap">
+                <div class="tab">
+                    <div class="tab__header">
+                        <p class="fs-3 fw-bold">Board 1</p>
+                    </div>
+                    <div class="tab__main">
+                        <div class="check">
+                            <label for="Board1_OUT1" class="fw-bold">OUT1</label>
+                            <input type="checkbox" name="" id="Board1_OUT1" value="1">
+                        </div>
+                        <div class="check">
+                            <label for="Board1_OUT2" class="fw-bold">OUT2</label>
+                            <input type="checkbox" name="" id="Board1_OUT2" value="2">
+                        </div>
+                        <div class="check">
+                            <label for="Board1_OUT3" class="fw-bold">OUT3</label>
+                            <input type="checkbox" name="" id="Board1_OUT3" value="4">
+                        </div>
+                        <div class="check">
+                            <label for="Board1_OUT4" class="fw-bold">OUT4</label>
+                            <input type="checkbox" name="" id="Board1_OUT4" value="8">
+                        </div>
+                        <div class="check">
+                            <label for="Board1_OUT5" class="fw-bold">OUT5</label>
+                            <input type="checkbox" name="" id="Board1_OUT5" value="16">
+                        </div>
+                        <div class="check">
+                            <label for="Board1_OUT6" class="fw-bold">OUT6</label>
+                            <input type="checkbox" name="" id="Board1_OUT6" value="32">
+                        </div>
+                        <div class="check">
+                            <label for="Board1_OUT7" class="fw-bold">OUT7</label>
+                            <input type="checkbox" name="" id="Board1_OUT7" value="64">
+                        </div>
+                        <div class="check">
+                            <label for="Board1_OUT8" class="fw-bold">OUT8</label>
+                            <input type="checkbox" name="" id="Board1_OUT8" value="128">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="tab__header">
+                        <p class="fs-3 fw-bold">Board 2</p>
+                    </div>
+                    <div class="tab__main">
+                        <div class="check">
+                            <label for="Board2_OUT1" class="fw-bold">OUT1</label>
+                            <input type="checkbox" name="" id="Board2_OUT1" value="256">
+                        </div>
+                        <div class="check">
+                            <label for="Board2_OUT2" class="fw-bold">OUT2</label>
+                            <input type="checkbox" name="" id="Board2_OUT2" value="512">
+                        </div>
+                        <div class="check">
+                            <label for="Board2_OUT3" class="fw-bold">OUT3</label>
+                            <input type="checkbox" name="" id="Board2_OUT3" value="1024">
+                        </div>
+                        <div class="check">
+                            <label for="Board2_OUT4" class="fw-bold">OUT4</label>
+                            <input type="checkbox" name="" id="Board2_OUT4" value="2048">
+                        </div>
+                        <div class="check">
+                            <label for="Board2_OUT5" class="fw-bold">OUT5</label>
+                            <input type="checkbox" name="" id="Board2_OUT5" value="4096">
+                        </div>
+                        <div class="check">
+                            <label for="Board2_OUT6" class="fw-bold">OUT6</label>
+                            <input type="checkbox" name="" id="Board2_OUT6" value="8192">
+                        </div>
+                        <div class="check">
+                            <label for="Board2_OUT7" class="fw-bold">OUT7</label>
+                            <input type="checkbox" name="" id="Board2_OUT7" value="16384">
+                        </div>
+                        <div class="check">
+                            <label for="Board2_OUT8" class="fw-bold">OUT8</label>
+                            <input type="checkbox" name="" id="Board2_OUT8" value="32768">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="tab__header">
+                        <p class="fs-3 fw-bold">Board 3</p>
+                    </div>
+                    <div class="tab__main">
+                        <div class="check">
+                            <label for="Board3_OUT1" class="fw-bold">OUT1</label>
+                            <input type="checkbox" name="" id="Board3_OUT1" value="65536">
+                        </div>
+                        <div class="check">
+                            <label for="Board3_OUT2" class="fw-bold">OUT2</label>
+                            <input type="checkbox" name="" id="Board3_OUT2" value="131072">
+                        </div>
+                        <div class="check">
+                            <label for="Board3_OUT3" class="fw-bold">OUT3</label>
+                            <input type="checkbox" name="" id="Board3_OUT3" value="262144">
+                        </div>
+                        <div class="check">
+                            <label for="Board3_OUT4" class="fw-bold">OUT4</label>
+                            <input type="checkbox" name="" id="Board3_OUT4" value="524288">
+                        </div>
+                        <div class="check">
+                            <label for="Board3_OUT5" class="fw-bold">OUT5</label>
+                            <input type="checkbox" name="" id="Board3_OUT5" value="1048576">
+                        </div>
+                        <div class="check">
+                            <label for="Board3_OUT6" class="fw-bold">OUT6</label>
+                            <input type="checkbox" name="" id="Board3_OUT6" value="2097152">
+                        </div>
+                        <div class="check">
+                            <label for="Board3_OUT7" class="fw-bold">OUT7</label>
+                            <input type="checkbox" name="" id="Board3_OUT7" value="4194304">
+                        </div>
+                        <div class="check">
+                            <label for="Board3_OUT8" class="fw-bold">OUT8</label>
+                            <input type="checkbox" name="" id="Board3_OUT8" value="8388608">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="tab__header">
+                        <p class="fs-3 fw-bold">Board 4</p>
+                    </div>
+                    <div class="tab__main">
+                        <div class="check">
+                            <label for="Board4_OUT1" class="fw-bold">OUT1</label>
+                            <input type="checkbox" name="" id="Board4_OUT1" value="16777216">
+                        </div>
+                        <div class="check">
+                            <label for="Board4_OUT2" class="fw-bold">OUT2</label>
+                            <input type="checkbox" name="" id="Board4_OUT2" value="33554432">
+                        </div>
+                        <div class="check">
+                            <label for="Board4_OUT3" class="fw-bold">OUT3</label>
+                            <input type="checkbox" name="" id="Board4_OUT3" value="67108864">
+                        </div>
+                        <div class="check">
+                            <label for="Board4_OUT4" class="fw-bold">OUT4</label>
+                            <input type="checkbox" name="" id="Board4_OUT4" value="134217728">
+                        </div>
+                        <div class="check">
+                            <label for="Board4_OUT5" class="fw-bold">OUT5</label>
+                            <input type="checkbox" name="" id="Board4_OUT5" value="268435456">
+                        </div>
+                        <div class="check">
+                            <label for="Board4_OUT6" class="fw-bold">OUT6</label>
+                            <input type="checkbox" name="" id="Board4_OUT6" value="536870912">
+                        </div>
+                        <div class="check">
+                            <label for="Board4_OUT7" class="fw-bold">OUT7</label>
+                            <input type="checkbox" name="" id="Board4_OUT7" value="1073741824">
+                        </div>
+                        <div class="check">
+                            <label for="Board4_OUT8" class="fw-bold">OUT8</label>
+                            <input type="checkbox" name="" id="Board4_OUT8" value="2147483648">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center calculating flex-column">
+            <div class="generate">
+                <button class="btn btn-primary fw-bold" id = "generating">Generate</button>
+            </div>
+            <div class="output mt-3" id = "output">
+                
+            </div>
+        </div>
+    </div>
+    <center><p class="fw-light">Created By KayChip</p></center>
+</body>
+</html>
+<script>
+    let board1_out1 = document.getElementById("Board1_OUT1"), 
+        board1_out2 = document.getElementById("Board1_OUT2"),
+        board1_out3 = document.getElementById("Board1_OUT3"), 
+        board1_out4 = document.getElementById("Board1_OUT4"),
+        board1_out5 = document.getElementById("Board1_OUT5"), 
+        board1_out6 = document.getElementById("Board1_OUT6"),
+        board1_out7 = document.getElementById("Board1_OUT7"), 
+        board1_out8 = document.getElementById("Board1_OUT8");
+
+    let board2_out1 = document.getElementById("Board2_OUT1"), 
+        board2_out2 = document.getElementById("Board2_OUT2"),
+        board2_out3 = document.getElementById("Board2_OUT3"), 
+        board2_out4 = document.getElementById("Board2_OUT4"),
+        board2_out5 = document.getElementById("Board2_OUT5"), 
+        board2_out6 = document.getElementById("Board2_OUT6"),
+        board2_out7 = document.getElementById("Board2_OUT7"), 
+        board2_out8 = document.getElementById("Board2_OUT8"); 
+
+    let board3_out1 = document.getElementById("Board3_OUT1"), 
+        board3_out2 = document.getElementById("Board3_OUT2"),
+        board3_out3 = document.getElementById("Board3_OUT3"), 
+        board3_out4 = document.getElementById("Board3_OUT4"),
+        board3_out5 = document.getElementById("Board3_OUT5"), 
+        board3_out6 = document.getElementById("Board3_OUT6"),
+        board3_out7 = document.getElementById("Board3_OUT7"), 
+        board3_out8 = document.getElementById("Board3_OUT8");
+
+    let board4_out1 = document.getElementById("Board4_OUT1"), 
+        board4_out2 = document.getElementById("Board4_OUT2"),
+        board4_out3 = document.getElementById("Board4_OUT3"), 
+        board4_out4 = document.getElementById("Board4_OUT4"),
+        board4_out5 = document.getElementById("Board4_OUT5"), 
+        board4_out6 = document.getElementById("Board4_OUT6"),
+        board4_out7 = document.getElementById("Board4_OUT7"), 
+        board4_out8 = document.getElementById("Board4_OUT8"); 
+
+        
+    let decimal = 0, hexDecimal = 0, binary = 0;
+    let output = document.getElementById('output');
+    let value, pre_val;
+    
+    
+    let generating = document.getElementById('generating');
+    generating.addEventListener('click', ()=>{
+        if(board1_out1.checked)
+        {
+            decimal += parseInt(board1_out1.value);
+        }
+        if(board1_out2.checked)
+        {
+            decimal += parseInt(board1_out2.value);
+        }
+        if(board1_out3.checked)
+        {
+            decimal += parseInt(board1_out3.value);
+        }
+        if(board1_out4.checked)
+        {
+            decimal += parseInt(board1_out4.value);
+        }
+        if(board1_out5.checked)
+        {
+            decimal += parseInt(board1_out5.value);
+        }
+        if(board1_out6.checked)
+        {
+            decimal += parseInt(board1_out6.value);
+        }
+        if(board1_out7.checked)
+        {
+            decimal += parseInt(board1_out7.value);
+        }
+        if(board1_out8.checked)
+        {
+            decimal += parseInt(board1_out8.value);
+        }
+
+        if(board2_out1.checked)
+        {
+            decimal += parseInt(board2_out1.value);
+        }
+        if(board2_out2.checked)
+        {
+            decimal += parseInt(board2_out2.value); 
+        }
+        if(board2_out3.checked)
+        {
+            decimal += parseInt(board2_out3.value);
+        }
+        if(board2_out4.checked)
+        {
+            decimal += parseInt(board2_out4.value);
+        }
+        if(board2_out5.checked)
+        {
+            decimal += parseInt(board2_out5.value);
+        }
+        if(board2_out6.checked)
+        {
+            decimal += parseInt(board2_out6.value);
+        }
+        if(board2_out7.checked)
+        {
+            decimal += parseInt(board2_out7.value);
+        }
+        if(board2_out8.checked)
+        {
+            decimal += parseInt(board2_out8.value);
+        }
+
+        if(board3_out1.checked)
+        {
+            decimal += parseInt(board3_out1.value);
+        }
+        if(board3_out2.checked)
+        {
+            decimal += parseInt(board3_out2.value); 
+        }
+        if(board3_out3.checked)
+        {
+            decimal += parseInt(board3_out3.value);
+        }
+        if(board3_out4.checked)
+        {
+            decimal += parseInt(board3_out4.value);
+        }
+        if(board3_out5.checked)
+        {
+            decimal += parseInt(board3_out5.value);
+        }
+        if(board3_out6.checked)
+        {
+            decimal += parseInt(board3_out6.value);
+        }
+        if(board3_out7.checked)
+        {
+            decimal += parseInt(board3_out7.value);
+        }
+        if(board3_out8.checked)
+        {
+            decimal += parseInt(board3_out8.value);
+        }
+        
+        if(board4_out1.checked)
+        {
+            decimal += parseInt(board4_out1.value);
+        }
+        if(board4_out2.checked)
+        {
+            decimal += parseInt(board4_out2.value); 
+        }
+        if(board4_out3.checked)
+        {
+            decimal += parseInt(board4_out3.value);
+        }
+        if(board4_out4.checked)
+        {
+            decimal += parseInt(board4_out4.value);
+        }
+        if(board4_out5.checked)
+        {
+            decimal += parseInt(board4_out5.value);
+        }
+        if(board4_out6.checked)
+        {
+            decimal += parseInt(board4_out6.value);
+        }
+        if(board4_out7.checked)
+        {
+            decimal += parseInt(board4_out7.value);
+        }
+        if(board4_out8.checked)
+        {
+            decimal += parseInt(board4_out8.value);
+        }
+
+        let outputHexDecimal = document.getElementById('outputHexDecimal'), outputDecimal = document.getElementById('outputDecimal'), outputBinary = document.getElementById('outputBinary');
+        
+        hexDecimal = decimal.toString(16);
+        binary = decimal.toString(2);
+        output.innerHTML = `<p class="fw-bold">HexDecimal: 0x` + hexDecimal + `<span id="outputHexDecimal"></span></p>
+                <p class="fw-bold">Decimal: ` + decimal + `<span id="outputDecimal"></span></p>
+                <p class="fw-bold">Binary: ` + binary + `<span id="outputBinary"></span></p>`
+        
+        decimal = 0;
+    })
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Caudex:wght@700&family=Expletus+Sans&family=Josefin+Sans:wght@400;600&family=Montserrat:wght@500;600&family=Nunito:wght@400;500;600&family=Pacifico&family=Poppins:wght@700&family=Quicksand:wght@400;500&family=Roboto:wght@700&family=Sarabun&family=Zen+Tokyo+Zoo&display=swap');
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: url('https://cutewallpaper.org/28/cool-low-poly-wallpaper-white/105989491.jpg');
+    height: auto;
+    width: 100%;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 85vh;
+    font-family: 'Nunito', sans-serif;
+}
+
+.tab{
+    margin: 30px;
+}
+</style>
